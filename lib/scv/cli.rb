@@ -1,3 +1,4 @@
+require 'thor'
 require 'rails/generators/actions'
 require 'database_cleaner'
 
