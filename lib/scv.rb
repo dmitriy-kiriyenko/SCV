@@ -1,5 +1,5 @@
 require "scv/version"
 
-module Scv
+module SCV
   # Your code goes here...
 end

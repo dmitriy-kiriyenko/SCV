@@ -4,12 +4,14 @@ require "scv/version"
 
 Gem::Specification.new do |s|
   s.name        = "scv"
-  s.version     = Scv::VERSION
+  s.version     = SCV::VERSION
   s.authors     = ["Dmitriy Kiriyenko"]
   s.email       = ["dmitriy.kiriyenko@anahoret.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{A set of thor scripts to manage rails application basic tasks}
+  s.description = %q{A set of thor scripts to manage rails application basic tasks.
+                     Such as managing local configuration files, dropping, creating
+                     and populating db, etc.}
 
   s.rubyforge_project = "scv"
 
@@ -19,6 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_development_dependency "rake"
+  s.add_runtime_dependency "database_cleaner"
+  s.add_runtime_dependency "railties"
 end
