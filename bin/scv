@@ -1,0 +1,3 @@
+#!/usr/bin/ruby
+
+SCV::CLI.start
