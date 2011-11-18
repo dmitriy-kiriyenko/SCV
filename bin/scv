@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
 
 require 'rubygems'
-require 'lib/scv/cli'
+require 'scv/cli'
 SCV::CLI.start
