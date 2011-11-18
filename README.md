@@ -1,5 +1,4 @@
-"SCV ready to go, sir!" -- scv.
-[!Space Construction Vehicle](http://i.minus.com/iXECZqiT0Ab7h.jpeg)](http://eu.battle.net/sc2/en/game/unit/scv)
+**"SCV ready to go, sir!"** -- *some scv*.
 
 A set of thor scripts with most general tasks to administer Rails applications.
 
@@ -56,3 +55,7 @@ to clean the database, load `seeds.rb` and `populate.rb` without dropping the da
 ### scv reset ###
 
 In the meantime, `scv reset` should be used when you wish to reset your database. It does `scv db --drop --no-seed`, then `scv populate --no-truncate`. This command can also be executed by just running `scv db`.
+
+## How it looks ##
+
+[![Space Construction Vehicle](http://i.minus.com/iXECZqiT0Ab7h.jpeg)](http://eu.battle.net/sc2/en/game/unit/scv)
