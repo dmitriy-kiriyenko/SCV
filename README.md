@@ -33,7 +33,6 @@ scv db
 for it. Available modificators are:
 
 * `--drop` or `-d` - drop database before creation. Defaults to false.
-* `--migrate` or `-m` - force running migrations. By default scv will run `db:schema:load` if `db/schema.rb` is present, `db:migrate` otherwise.
 * `--no-seeds` - don't run `db:seed`
 
 The `no-` options are also available with `--skip` prefix as usual (e.g., `--skip-test-clone`)

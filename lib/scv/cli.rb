@@ -11,17 +11,15 @@ module SCV
     default_task(:reset)
 
     desc "bootstrap", "Initially sets up the application"
-    method_option :migrate, :type => :boolean, :default => false, :aliases => '-m'
     def bootstrap
       invoke :config, [], :force => true
-      invoke :db, [], :seed => false, :migrate => options.migrate?
+      invoke :db, [], :seed => false
       invoke :populate, :truncate => false
     end
 
     desc "reset", "Drops and recreates the database with test data"
-    method_option :migrate, :type => :boolean, :default => false, :aliases => '-m'
     def reset
-      invoke :db, [], :drop => true, :seed => false, :migrate => options.migrate?
+      invoke :db, [], :drop => true, :seed => false
       invoke :populate, [], :truncate => false
     end
 
@@ -33,14 +31,12 @@ module SCV
 
     desc "db", "initialize db and load schema"
     method_option :drop, :type => :boolean, :default => false, :aliases => '-d'
-    method_option :migrate, :type => :boolean, :default => false, :aliases => '-m'
     method_option :seed, :type => :boolean, :default => true, :aliases => '-s'
     def db
-      remove_file("db/schema.rb") if options.migrate?
       rake([].tap do |commands|
         commands.push "db:drop" if options.drop?
         commands.push "db:create"
-        commands.push File.exists?("db/schema.rb") ? "db:schema:load" : "db:migrate"
+        commands.push "db:migrate"
         commands.push "db:seed" if options.seed?
         commands.push "db:test:clone"
       end.join(" "))
