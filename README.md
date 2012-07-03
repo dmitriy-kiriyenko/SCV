@@ -16,7 +16,7 @@ gem 'scv', :group => 'development', :require => false
 
 It's a common pattern, especially for open source projects not to keep development configuration files in version control, keeping their example versions instead. The most common is config/database.yml.example. While I'm going to support this patten in future, I currently suggest another one, which is keeping all example configuration files in config/examples, which structure repeats config directory. For support of this patter there is a setup:config script in this set. Run
 
-```shell
+```console
 scv config
 ```
 
@@ -26,7 +26,7 @@ to copy all example configuration files to their natural locations. You may use 
 
 Pretty often you need to create a database, tune it's schema to current and load seeds after checking out a new application. I advice you to use a
 
-```shell
+```console
 scv db
 ```
 
@@ -41,7 +41,7 @@ The `no-` options are also available with `--skip` prefix as usual (e.g., `--ski
 
 Again, pretty often you need to populate database with a test data, needed for development. I suggest a solution when near `db/seeds.rb` file you place `db/populate.rb` with the similar purpose and content, but containing data you'd like to insert to database for development. If you do so, you may use
 
-```shell
+```console
 scv populate
 ```
 
