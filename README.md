@@ -1,4 +1,6 @@
-**"SCV ready to go, sir!"** -- *some scv*.
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/dmitriy-kiriyenko/SCV)
+
+**"SCV ready to go, sir!"** -- *some scv*. 
 
 A set of thor scripts with most general tasks to administer Rails applications.
 
