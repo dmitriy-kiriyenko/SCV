@@ -38,7 +38,7 @@ module SCV
         commands.push "db:create"
         commands.push "db:migrate"
         commands.push "db:seed" if options.seed?
-        commands.push "db:test:clone"
+        commands.push "db:test:prepare"
       end.join(" "))
     end
 
