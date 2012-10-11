@@ -16,7 +16,7 @@ gem 'scv', :group => 'development', :require => false
 
 ### scv config ###
 
-It's a common pattern, especially for open source projects not to keep development configuration files in version control, keeping their example versions instead. The most common is config/database.yml.example. While I'm going to support this patten in future, I currently suggest another one, which is keeping all example configuration files in config/examples, which structure repeats config directory. For support of this patter there is a setup:config script in this set. Run
+It's a common pattern, especially for open source projects not to keep development configuration files in version control, keeping their example versions instead. The most common is config/database.yml.example. While I'm going to support this pattern in future, I currently suggest another one, which is keeping all example configuration files in config/examples, which structure repeats config directory. For support of this pattern there is a setup:config script in this set. Run
 
 ```console
 scv config
